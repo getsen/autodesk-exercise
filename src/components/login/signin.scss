@@ -1,0 +1,134 @@
+@mixin titleFont() {
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+}
+
+@mixin inputFont() {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin infoText() {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.login-container {
+  margin: 0 auto;
+  max-width: 400px;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+
+  .card {
+    height: 95vh;
+  }
+
+  .card-body {
+    padding: 0 30px;
+    overflow: auto;
+  }
+
+  .title {
+    @include titleFont();
+    margin: 48px 0 24px;
+  }
+
+  .welcome-title {
+    @include titleFont();
+    margin: 48px 0 0;
+  }
+
+  label,
+  input {
+    @include inputFont();
+    color: #3c3c3c;
+    width: 100%;
+  }
+
+  input {
+    height: 38px;
+    background-color: #fff;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+  }
+
+  .btn-primary {
+    background-color: #0696d7;
+    border-radius: 4px;
+    height: 38px;
+    width: 100%;
+    @include inputFont();
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #2481af;
+      border-color: #2481af;
+    }
+  }
+
+  .form-info {
+    @include infoText();
+    margin-top: 12px;
+    .form-info-text {
+      color: #808080;
+    }
+    .form-info-link {
+      padding-left: 5px;
+      color: #006eaf;
+    }
+  }
+
+  .link-pwd-back {
+    position: absolute;
+    padding-left: 5px;
+  }
+
+  .field-error {
+    @include infoText();
+    background-color: #dcdcdc;
+    border-color: #bbbbbb;
+    border-radius: 4px;
+    color: #666666;
+    display: block;
+    padding: 13px 8px;
+  }
+
+  .error-input {
+    border: 1px solid #ee4444;
+  }
+
+  .success-msg {
+    @include inputFont();
+    margin-top: 12px;
+    background-color: #38abdf;
+    opacity: 0.7;
+    border-radius: 4px;
+    color: #000;
+  }
+}
+
+.sign-in {
+  .input-grp {
+    margin-bottom: 12px;
+  }
+}
+
+.create-account {
+  .input-grp {
+    margin-bottom: 16px;
+  }
+  .create-account-footer {
+    margin-top: 32px;
+  }
+}
+
+.arrow-left {
+  border: 1px solid #006eaf;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}

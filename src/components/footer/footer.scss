@@ -1,0 +1,17 @@
+.auto-footer {
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 0;
+  margin-bottom: 12px;
+  .footer-txt {
+    color: #999999;
+  }
+  a {
+    color: #006eaf;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
